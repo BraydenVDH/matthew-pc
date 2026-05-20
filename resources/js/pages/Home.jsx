@@ -624,7 +624,7 @@ export default function Home() {
                   {[
                     ["Response", "< 12h"],
                     ["Channels", "Discord · Email"],
-                    ["Payment", "PayPal · Revolut · BTC"],
+                    ["Payment", "PayPal"],
                     ["Timezone", "UK · GMT / BST"],
                   ].map(([k, v]) => (
                     <div key={k} className="flex items-center justify-between py-3 text-sm">
@@ -667,18 +667,25 @@ export default function Home() {
                     <Label>Service</Label>
                     <div className="grid gap-3 rounded-lg border p-4 md:grid-cols-2">
                       {[
-                        ["build", "Custom build · £45", true],
-                        ["opti", "Full optimisation · £25", true],
-                        ["oc", "Overclock only · £15", false],
-                        ["retune", "Re-tune · existing client", false],
-                      ].map(([id, label, def]) => (
+                        ["build", "Custom build · £45", true, "Full optimisation included"],
+                        ["opti", "Optimisation only · £25", false, null],
+                        ["oc", "Overclock only · £15", false, null],
+                        ["retune", "Re-tune · existing client", false, null],
+                      ].map(([id, label, def, note]) => (
                         <label
                           key={id}
                           htmlFor={id}
-                          className="flex cursor-pointer items-center gap-3 rounded-md p-2 text-sm transition-colors hover:bg-accent"
+                          className="flex cursor-pointer items-start gap-3 rounded-md p-2 text-sm transition-colors hover:bg-accent"
                         >
-                          <Checkbox id={id} defaultChecked={def} />
-                          {label}
+                          <Checkbox id={id} defaultChecked={def} className="mt-0.5" />
+                          <span className="flex flex-col gap-0.5">
+                            <span>{label}</span>
+                            {note && (
+                              <span className="font-mono text-[10px] uppercase tracking-wider text-chart-1">
+                                {note}
+                              </span>
+                            )}
+                          </span>
                         </label>
                       ))}
                     </div>
@@ -695,9 +702,67 @@ export default function Home() {
                     </div>
                   </div>
 
+                  {/* Build preferences */}
+                  <div className="grid gap-4 rounded-lg border bg-background/40 p-4">
+                    <div className="flex items-center justify-between">
+                      <Label className="text-sm">Build preferences</Label>
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                        Optional · skip if you don't mind
+                      </span>
+                    </div>
+
+                    <div className="grid gap-5 md:grid-cols-2">
+                      <div className="grid gap-2">
+                        <Label htmlFor="brands" className="text-xs font-normal text-muted-foreground">
+                          Brand preferences
+                        </Label>
+                        <Input id="brands" placeholder="AMD vs Intel · ASUS · Corsair · …" />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="size" className="text-xs font-normal text-muted-foreground">
+                          Size / form factor
+                        </Label>
+                        <Input id="size" placeholder="Mini-ITX · mATX · ATX · whatever fits" />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-5 md:grid-cols-2">
+                      <div className="grid gap-2">
+                        <Label htmlFor="cooling" className="text-xs font-normal text-muted-foreground">
+                          Water cooling?
+                        </Label>
+                        <Input id="cooling" placeholder="Air · AIO · custom loop · whatever's quietest" />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor="priority" className="text-xs font-normal text-muted-foreground">
+                          Looks or pure performance?
+                        </Label>
+                        <Input id="priority" placeholder="50 / 50 · looks-first · frames-first" />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-2">
+                      <Label htmlFor="colour" className="text-xs font-normal text-muted-foreground">
+                        Colour scheme
+                      </Label>
+                      <Input id="colour" placeholder="All-black · white & wood · RGB everything" />
+                    </div>
+
+                    <div className="grid gap-2">
+                      <Label htmlFor="special" className="text-xs font-normal text-muted-foreground">
+                        Special requests
+                      </Label>
+                      <Textarea
+                        id="special"
+                        rows={2}
+                        placeholder="Quietest possible · re-using my old GPU · room for a future second NVMe…"
+                      />
+                    </div>
+                  </div>
+
                   <div className="grid gap-2">
                     <Label htmlFor="rig">What you're running (or want)</Label>
-                    <Textarea id="rig" rows={4} placeholder="CPU / GPU / RAM / monitor — or just a vibe" />
+                    <Textarea id="rig" rows={3} placeholder="CPU / GPU / RAM / monitor — or just a vibe" />
                   </div>
 
                   <Button type="submit" size="lg" className="mt-2 w-full justify-between">
