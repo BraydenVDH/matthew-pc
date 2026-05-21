@@ -304,7 +304,7 @@ export default function Parts() {
 
       {/* HERO INTRO */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-12 pb-8 sm:pt-20 sm:pb-10 md:pt-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 pt-12 pb-8 sm:pt-20 sm:pb-10 md:pt-24">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <Badge variant="outline" className="mb-6 font-mono">
@@ -333,7 +333,7 @@ export default function Parts() {
 
       {/* PICKS */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl space-y-6 sm:space-y-8 px-4 sm:px-6 py-10 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-7xl space-y-6 sm:space-y-8 px-5 sm:px-6 py-10 sm:py-16 md:py-20">
           {picks.map((p, i) => (
             <PickCard
               key={p.id}
@@ -364,7 +364,7 @@ export default function Parts() {
 
       {/* FOOTER */}
       <footer className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-12">
           <div className="flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-wider text-muted-foreground md:flex-row md:items-center">
             <span>
               Disclosure: as an Amazon Associate I earn from qualifying purchases. Picks are stored in your browser.

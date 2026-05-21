@@ -171,14 +171,14 @@ export default function Home() {
 
       {/* ============ HERO ============ */}
       <section className="relative border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-12 pb-12 sm:pt-20 sm:pb-16 md:pt-28 md:pb-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 pt-12 pb-12 sm:pt-20 sm:pb-16 md:pt-28 md:pb-24">
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
             <div className="flex flex-col justify-end">
               <Badge variant="outline" className="mb-6 gap-2 font-mono">
                 <span className="size-1 rounded-full bg-chart-1" />
                 BIOS-level optimisation · custom builds · overclocking
               </Badge>
-              <h1 className="text-balance text-4xl font-semibold leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
+              <h1 className="text-balance text-[2rem] font-semibold leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
                 Double your frames.
                 <br />
                 <span className="text-muted-foreground">Half the excuses.</span>
@@ -275,7 +275,7 @@ export default function Home() {
           {stats.map((s, i) => (
             <div
               key={i}
-              className={`relative px-4 py-6 sm:px-6 sm:py-10 ${i < stats.length - 1 ? "lg:border-r" : ""} ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b lg:border-b-0" : ""}`}
+              className={`relative px-5 py-6 sm:px-6 sm:py-10 ${i < stats.length - 1 ? "lg:border-r" : ""} ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b lg:border-b-0" : ""}`}
             >
               <span className="absolute right-3 top-3 sm:right-4 sm:top-4 font-mono text-[10px] tracking-wider text-muted-foreground">
                 0{i + 1}
@@ -289,7 +289,7 @@ export default function Home() {
 
       {/* ============ SERVICES ============ */}
       <section id="services" className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="01" label="Services" />
             <div>
@@ -482,7 +482,7 @@ export default function Home() {
 
       {/* ============ WHY HUMAN ============ */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="02" label="The argument" />
             <div>
@@ -532,7 +532,7 @@ export default function Home() {
 
       {/* ============ PROCESS ============ */}
       <section id="process" className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="03" label="How it runs" />
             <div>
@@ -570,7 +570,7 @@ export default function Home() {
 
       {/* ============ TESTIMONIALS ============ */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-24">
           <div className="grid gap-4 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-card/60">
@@ -594,7 +594,7 @@ export default function Home() {
 
       {/* ============ ORDER ============ */}
       <section id="order" className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="04" label="Book a slot" />
             <div>
@@ -778,7 +778,7 @@ export default function Home() {
 
       {/* ============ FAQ ============ */}
       <section id="faq" className="border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <div>
               <SectionEyebrow num="05" label="Honest questions only" />
@@ -814,7 +814,7 @@ export default function Home() {
 
       {/* ============ CTA + FOOTER ============ */}
       <footer className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 py-20">
           <h2 className="text-balance text-4xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-8xl">
             Run it <span className="text-muted-foreground">faster.</span>
           </h2>
