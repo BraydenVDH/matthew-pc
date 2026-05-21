@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         // 👉 EDIT THIS LINE — replace with your real password
-        $password = '1234SmellADick';
+        $password = 'EDIT THIS';
 
         DB::table('admins')->updateOrInsert(
             ['id' => 1],
