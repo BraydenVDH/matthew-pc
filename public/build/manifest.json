@@ -264,7 +264,7 @@
     "src": "_geist-mono-500-normal-mNhfPmgl.woff"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Dj85Zn_u.css",
+    "file": "assets/app-Br3ycd3U.css",
     "name": "app",
     "names": [
       "app.css"
@@ -273,7 +273,7 @@
     "isEntry": true
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-B64jWwLD.js",
+    "file": "assets/app-BEG61aA_.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -282,7 +282,7 @@
     ]
   },
   "resources/js/parts.jsx": {
-    "file": "assets/parts-CegNOkaB.js",
+    "file": "assets/parts-BNZBmrvw.js",
     "name": "parts",
     "src": "resources/js/parts.jsx",
     "isEntry": true,

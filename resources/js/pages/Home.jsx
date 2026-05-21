@@ -133,13 +133,13 @@ export default function Home() {
 
       {/* ============ NAV ============ */}
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-6">
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-6">
           <a href="/" className="flex items-center gap-2.5 font-mono text-sm tracking-tight">
             <span className="relative grid size-6 place-items-center rounded-md border bg-card">
               <span className="size-1.5 rounded-full bg-chart-1 shadow-[0_0_10px_var(--color-chart-1)]" />
             </span>
             <span className="font-semibold">matthew.sys</span>
-            <Badge variant="outline" className="ml-1 font-mono text-[10px] tracking-wider">
+            <Badge variant="outline" className="ml-1 hidden font-mono text-[10px] tracking-wider sm:inline-flex">
               v0.4.1
             </Badge>
           </a>
@@ -171,14 +171,14 @@ export default function Home() {
 
       {/* ============ HERO ============ */}
       <section className="relative border-b">
-        <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
-          <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-12 pb-12 sm:pt-20 sm:pb-16 md:pt-28 md:pb-24">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
             <div className="flex flex-col justify-end">
               <Badge variant="outline" className="mb-6 gap-2 font-mono">
                 <span className="size-1 rounded-full bg-chart-1" />
                 BIOS-level optimisation · custom builds · overclocking
               </Badge>
-              <h1 className="text-balance text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl">
+              <h1 className="text-balance text-4xl font-semibold leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
                 Double your frames.
                 <br />
                 <span className="text-muted-foreground">Half the excuses.</span>
@@ -218,16 +218,16 @@ export default function Home() {
                   {benchRows.map((r) => (
                     <div
                       key={r.lbl}
-                      className="grid grid-cols-[1fr_auto_auto] items-baseline gap-4 border-b border-dashed py-4 last:border-b-0"
+                      className="grid grid-cols-[1fr_auto_auto] items-baseline gap-2 sm:gap-4 border-b border-dashed py-4 last:border-b-0"
                     >
                       <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                         {r.lbl}
                       </span>
-                      <div className="flex items-baseline gap-3 font-mono">
-                        <span className="text-base text-muted-foreground line-through decoration-destructive">
+                      <div className="flex items-baseline gap-2 sm:gap-3 font-mono">
+                        <span className="text-sm sm:text-base text-muted-foreground line-through decoration-destructive">
                           {r.old}
                         </span>
-                        <span className="text-3xl font-semibold tracking-tight text-foreground">
+                        <span className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
                           {r.v}
                         </span>
                       </div>
@@ -275,12 +275,12 @@ export default function Home() {
           {stats.map((s, i) => (
             <div
               key={i}
-              className={`relative px-6 py-10 ${i < stats.length - 1 ? "lg:border-r" : ""} ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b lg:border-b-0" : ""}`}
+              className={`relative px-4 py-6 sm:px-6 sm:py-10 ${i < stats.length - 1 ? "lg:border-r" : ""} ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b lg:border-b-0" : ""}`}
             >
-              <span className="absolute right-4 top-4 font-mono text-[10px] tracking-wider text-muted-foreground">
+              <span className="absolute right-3 top-3 sm:right-4 sm:top-4 font-mono text-[10px] tracking-wider text-muted-foreground">
                 0{i + 1}
               </span>
-              <div className="text-4xl font-semibold tracking-tight md:text-5xl">{s.n}</div>
+              <div className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">{s.n}</div>
               <div className="mt-3 max-w-[28ch] text-sm text-muted-foreground">{s.l}</div>
             </div>
           ))}
@@ -289,11 +289,11 @@ export default function Home() {
 
       {/* ============ SERVICES ============ */}
       <section id="services" className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="01" label="Services" />
             <div>
-              <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
                 Two things, done properly.
               </h2>
               <p className="mt-5 max-w-prose text-muted-foreground">
@@ -314,7 +314,7 @@ export default function Home() {
                     <span className="size-1 rounded-full bg-chart-1" /> Available
                   </Badge>
                 </div>
-                <CardTitle className="mt-4 text-3xl tracking-tight md:text-4xl">
+                <CardTitle className="mt-4 text-2xl tracking-tight sm:text-3xl md:text-4xl">
                   Custom part list
                 </CardTitle>
                 <CardDescription className="mt-2 max-w-prose text-[15px]">
@@ -324,7 +324,7 @@ export default function Home() {
               <CardContent>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-muted-foreground">£</span>
-                  <span className="text-5xl font-semibold tracking-tight">45</span>
+                  <span className="text-4xl sm:text-5xl font-semibold tracking-tight">45</span>
                   <span className="ml-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
                     flat fee
                   </span>
@@ -364,7 +364,7 @@ export default function Home() {
                     <span className="size-1 rounded-full bg-chart-1" /> Available
                   </Badge>
                 </div>
-                <CardTitle className="mt-4 text-3xl tracking-tight md:text-4xl">
+                <CardTitle className="mt-4 text-2xl tracking-tight sm:text-3xl md:text-4xl">
                   Full optimisation
                 </CardTitle>
                 <CardDescription className="mt-2 max-w-prose text-[15px]">
@@ -374,7 +374,7 @@ export default function Home() {
               <CardContent>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-muted-foreground">£</span>
-                  <span className="text-5xl font-semibold tracking-tight">25</span>
+                  <span className="text-4xl sm:text-5xl font-semibold tracking-tight">25</span>
                   <span className="ml-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
                     per rig
                   </span>
@@ -415,7 +415,7 @@ export default function Home() {
                       Best value
                     </span>
                   </div>
-                  <h3 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
+                  <h3 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                     Full stack
                     <br />
                     <span className="text-muted-foreground">build &amp; tune</span>
@@ -482,11 +482,11 @@ export default function Home() {
 
       {/* ============ WHY HUMAN ============ */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="02" label="The argument" />
             <div>
-              <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
                 Why a human still beats <span className="text-muted-foreground">the .exe.</span>
               </h2>
               <p className="mt-5 max-w-prose text-muted-foreground">
@@ -498,7 +498,7 @@ export default function Home() {
           <div className="mt-14 grid gap-6 md:grid-cols-[1.1fr_1fr]">
             <Card className="bg-card/60">
               <CardContent className="flex h-full flex-col justify-between gap-8 p-8 md:p-10">
-                <p className="text-balance text-2xl font-medium leading-snug tracking-tight md:text-3xl">
+                <p className="text-balance text-xl font-medium leading-snug tracking-tight sm:text-2xl md:text-3xl">
                   <span className="text-chart-1">"</span>When you properly do a BIOS, Windows and hardware pass, you can see up to a doubling in performance — your 1% lows go from 30 to 65. For an FPS game, that's the whole match.<span className="text-chart-1">"</span>
                 </p>
                 <div className="flex items-center justify-between font-mono text-xs uppercase tracking-wider text-muted-foreground">
@@ -532,11 +532,11 @@ export default function Home() {
 
       {/* ============ PROCESS ============ */}
       <section id="process" className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="03" label="How it runs" />
             <div>
-              <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
                 Four steps, one <span className="text-muted-foreground">tighter</span> rig.
               </h2>
               <p className="mt-5 max-w-prose text-muted-foreground">
@@ -570,7 +570,7 @@ export default function Home() {
 
       {/* ============ TESTIMONIALS ============ */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-24">
           <div className="grid gap-4 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-card/60">
@@ -594,11 +594,11 @@ export default function Home() {
 
       {/* ============ ORDER ============ */}
       <section id="order" className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <SectionEyebrow num="04" label="Book a slot" />
             <div>
-              <h2 className="text-balance text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              <h2 className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
                 Drop the details.
                 <br />
                 I'll <span className="text-muted-foreground">quote</span> back same day.
@@ -778,11 +778,11 @@ export default function Home() {
 
       {/* ============ FAQ ============ */}
       <section id="faq" className="border-b">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
             <div>
               <SectionEyebrow num="05" label="Honest questions only" />
-              <h3 className="mt-6 text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+              <h3 className="mt-6 text-balance text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl">
                 The ones I actually get asked in Discord.
               </h3>
               <p className="mt-4 max-w-[30ch] text-muted-foreground">
@@ -814,12 +814,12 @@ export default function Home() {
 
       {/* ============ CTA + FOOTER ============ */}
       <footer className="relative">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <h2 className="text-balance text-6xl font-semibold leading-[0.95] tracking-tight md:text-8xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-20">
+          <h2 className="text-balance text-4xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-8xl">
             Run it <span className="text-muted-foreground">faster.</span>
           </h2>
-          <div className="mt-12 grid gap-10 border-t pt-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
-            <div>
+          <div className="mt-12 grid gap-8 sm:gap-10 border-t pt-10 grid-cols-2 sm:grid-cols-3 md:grid-cols-[2fr_1fr_1fr_1fr]">
+            <div className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2 font-mono text-sm">
                 <span className="size-1.5 rounded-full bg-chart-1" />
                 matthew.sys

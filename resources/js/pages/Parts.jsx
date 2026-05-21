@@ -71,7 +71,7 @@ function PickCard({ pick, index, onRemove, onEdit }) {
     <Card className="overflow-hidden">
       <div className="grid md:grid-cols-[1.1fr_1fr]">
         {/* image */}
-        <div className="relative flex items-center justify-center bg-gradient-to-br from-background via-card to-chart-1/[0.06] p-10 md:p-14">
+        <div className="relative flex items-center justify-center bg-gradient-to-br from-background via-card to-chart-1/[0.06] p-6 sm:p-10 md:p-14">
           <div
             aria-hidden
             className="absolute inset-0 opacity-30"
@@ -92,7 +92,7 @@ function PickCard({ pick, index, onRemove, onEdit }) {
               no image · paste a full /dp/ URL for auto-image
             </div>
           )}
-          <div className="absolute left-6 top-6 z-10 flex items-center gap-2">
+          <div className="absolute left-3 top-3 z-10 flex flex-wrap items-center gap-1.5 sm:left-6 sm:top-6 sm:gap-2">
             <Badge variant="outline" className="font-mono">
               Pick · {String(index + 1).padStart(2, "0")}
             </Badge>
@@ -101,20 +101,20 @@ function PickCard({ pick, index, onRemove, onEdit }) {
             </Badge>
           </div>
           {pick.asin && (
-            <span className="absolute bottom-6 right-6 z-10 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+            <span className="absolute bottom-3 right-3 z-10 font-mono text-[10px] uppercase tracking-wider text-muted-foreground sm:bottom-6 sm:right-6">
               ASIN · {pick.asin}
             </span>
           )}
         </div>
 
         {/* details */}
-        <div className="flex flex-col gap-6 p-8 md:p-10">
+        <div className="flex flex-col gap-5 p-6 sm:gap-6 sm:p-8 md:p-10">
           <div className="flex items-start justify-between gap-4">
             <div>
               <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
                 {pick.brand} · {pick.subtitle}
               </div>
-              <CardTitle className="mt-3 text-2xl font-semibold leading-tight tracking-tight md:text-3xl">
+              <CardTitle className="mt-3 text-xl font-semibold leading-tight tracking-tight sm:text-2xl md:text-3xl">
                 {pick.title}
               </CardTitle>
             </div>
@@ -262,13 +262,13 @@ export default function Parts() {
 
       {/* NAV */}
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-6">
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-6">
           <a href="/" className="flex items-center gap-2.5 font-mono text-sm tracking-tight">
             <span className="relative grid size-6 place-items-center rounded-md border bg-card">
               <span className="size-1.5 rounded-full bg-chart-1 shadow-[0_0_10px_var(--color-chart-1)]" />
             </span>
             <span className="font-semibold">matthew.sys</span>
-            <Badge variant="outline" className="ml-1 font-mono text-[10px] tracking-wider">
+            <Badge variant="outline" className="ml-1 hidden font-mono text-[10px] tracking-wider sm:inline-flex">
               parts
             </Badge>
           </a>
@@ -304,13 +304,13 @@ export default function Parts() {
 
       {/* HERO INTRO */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl px-6 pt-20 pb-10 md:pt-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-12 pb-8 sm:pt-20 sm:pb-10 md:pt-24">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <Badge variant="outline" className="mb-6 font-mono">
                 <CircleCheck className="size-3 text-chart-1" /> Affiliate · honest picks
               </Badge>
-              <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[0.95] tracking-tight md:text-6xl">
+              <h1 className="max-w-3xl text-balance text-3xl font-semibold leading-[0.95] tracking-tight sm:text-4xl md:text-6xl">
                 Parts I'd
                 <br />
                 <span className="text-muted-foreground">actually buy.</span>
@@ -333,7 +333,7 @@ export default function Parts() {
 
       {/* PICKS */}
       <section className="border-b">
-        <div className="mx-auto max-w-7xl space-y-8 px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl space-y-6 sm:space-y-8 px-4 sm:px-6 py-10 sm:py-16 md:py-20">
           {picks.map((p, i) => (
             <PickCard
               key={p.id}
@@ -364,7 +364,7 @@ export default function Parts() {
 
       {/* FOOTER */}
       <footer className="relative">
-        <div className="mx-auto max-w-7xl px-6 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-wider text-muted-foreground md:flex-row md:items-center">
             <span>
               Disclosure: as an Amazon Associate I earn from qualifying purchases. Picks are stored in your browser.
