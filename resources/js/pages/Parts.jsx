@@ -262,7 +262,7 @@ export default function Parts() {
 
       {/* NAV */}
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-6">
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-5 sm:gap-6 sm:px-6">
           <a href="/" className="flex items-center gap-2.5 font-mono text-sm tracking-tight">
             <span className="relative grid size-6 place-items-center rounded-md border bg-card">
               <span className="size-1.5 rounded-full bg-chart-1 shadow-[0_0_10px_var(--color-chart-1)]" />

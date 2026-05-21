@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* ============ NAV ============ */}
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-6">
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-5 sm:gap-6 sm:px-6">
           <a href="/" className="flex items-center gap-2.5 font-mono text-sm tracking-tight">
             <span className="relative grid size-6 place-items-center rounded-md border bg-card">
               <span className="size-1.5 rounded-full bg-chart-1 shadow-[0_0_10px_var(--color-chart-1)]" />
@@ -173,9 +173,9 @@ export default function Home() {
       <section className="relative border-b">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 pt-12 pb-12 sm:pt-20 sm:pb-16 md:pt-28 md:pb-24">
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-            <div className="flex flex-col justify-end">
-              <Badge variant="outline" className="mb-6 gap-2 font-mono">
-                <span className="size-1 rounded-full bg-chart-1" />
+            <div className="flex min-w-0 flex-col justify-end">
+              <Badge variant="outline" className="mb-6 max-w-full gap-2 whitespace-normal text-left font-mono">
+                <span className="size-1 shrink-0 rounded-full bg-chart-1" />
                 BIOS-level optimisation · custom builds · overclocking
               </Badge>
               <h1 className="text-balance text-[2rem] font-semibold leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
